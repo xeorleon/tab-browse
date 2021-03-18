@@ -1,3 +1,4 @@
+const path = require('path')
 module.exports = {
     port: 8081,
     db: {
@@ -7,7 +8,10 @@ module.exports = {
         options: {
             dialect: process.env.DIALECT || 'sqlite',
             host: process.env.HOST || 'localhost',
-            storage: './tabbrowse.sqlite'
+            storage: path.resolve(__dirname,'./tabbrowse.sqlite')
         }
-    }
+    },
+    authentication: {
+        jwtSecret: process.env.JWT_SECRET || 'secret'
+      }
 }
