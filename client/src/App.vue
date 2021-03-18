@@ -1,16 +1,20 @@
 <template>
-  <div id="app">
-    <!-- <img src="./assets/logo.png"> -->
-    <router-view/>
-  </div>
+  <v-app>
+    <router-view />
+  </v-app>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+
+  components: {},
+
+  data: () => ({
+    //
+  })
 }
 </script>
-
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -19,5 +23,14 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.input-group--text-field input {
+  border-bottom: 1px solid black;
+}
+.toolbar__title{
+  color:white;
+}
+.v-btn__content{
+  color:white;
 }
 </style>
